@@ -1,122 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div id="container"></div>
-<div id="info">Bảng Tuần Hoàn Hóa Học</div>
-<div id="menu">
-<button id="table">Table</button>
-<button id="helix">Helix</button>
-<button id="sphere">Sphere</button>
-<button id="grid">Grid</button>
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js'>
-  </script>
-  <script  src="./script.js">
-  </script>
-<style type="text/css">
-    html, body {
-     height: 100%;
-    }
-
-body 
-{
-    background-color: #000000;
-    margin: 0;
-    font-family: Helvetica, sans-serif;
-    overflow: hidden;
-    }
-
-a 
-{
-    color: #ffffff;
-}
-
-#info {
-  position: absolute;
-  width: 100%;
-  color: #ffffff;
-  padding: 5px;
-  font-family: Monospace;
-  font-size: 13px;
-  font-weight: bold;
-  text-align: center;
-  z-index: 1;
-}
-
-#menu {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  font-family: verdana,Tahoma,Arial,Hei,"Microsoft Yahei",SimHei;
-}
-
-.element {
-  width: 120px;
-  height: 160px;
-  box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
-  border: 1px solid rgba(127,255,255,0.25);
-  text-align: center;
-  cursor: default;
-}
-
-.element:hover {
-  box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
-  border: 1px solid rgba(127,255,255,0.75);
-}
-
-  .element .number {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 12px;
-    color: rgba(127,255,255,0.75);
-  }
-
-  .element .symbol {
-    position: absolute;
-    top: 40px;
-    left: 0px;
-    right: 0px;
-    font-size: 60px;
-    font-weight: bold;
-    color: rgba(255,255,255,0.75);
-    text-shadow: 0 0 10px rgba(0,255,255,0.95);
-  }
-
-  .element .details {
-    position: absolute;
-    bottom: 15px;
-    left: 0px;
-    right: 0px;
-    font-size: 12px;
-    color: rgba(127,255,255,0.75);
-  }
-
-button {
-  color: rgba(127,255,255,0.75);
-  background: transparent;
-  outline: 1px solid rgba(127,255,255,0.75);
-  border: 0px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: rgba(0,255,255,0.5);
-}
-button:active {
-  color: #000000;
-  background-color: rgba(0,255,255,0.75);
-}
-</style>
-<script type="text/javascript">
-  // tween.js - https://github.com/sole/tween.js
+// tween.js - https://github.com/sole/tween.js
 'use strict';
 var TWEEN = TWEEN || function() {
     var a = [];
@@ -1004,11 +886,6 @@ THREE.TrackballControls = function ( object, domElement ) {
 
 THREE.TrackballControls.prototype = Object.create( THREE.EventDispatcher.prototype );
 
-/**
- * Based on http://www.emagix.net/academic/mscs-project/item/camera-sync-with-css3-and-webgl-threejs
- * @author mrdoob / http://mrdoob.com/
- */
-
 THREE.CSS3DObject = function ( element ) {
 
   THREE.Object3D.call( this );
@@ -1157,8 +1034,6 @@ THREE.CSS3DRenderer = function () {
       var style;
 
       if ( object instanceof THREE.CSS3DSprite ) {
-
-        // http://swiftcoder.wordpress.com/2008/11/25/constructing-a-billboard-matrix/
 
         matrix.copy( camera.matrixWorldInverse );
         matrix.transpose();
@@ -1564,6 +1439,3 @@ function animate() {
 function render() {
   renderer.render( scene, camera );
 }
-</script>
-</body>
-</html>
